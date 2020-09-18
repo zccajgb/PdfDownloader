@@ -17,15 +17,6 @@
 		],
 		"scripts": ["background.js"]  
     },
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": [
-                "jquery.js",
-                "content.js"
-            ]
-        }
-    ],
     "permissions": [
      "activeTab",
      "downloads"

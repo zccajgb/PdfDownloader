@@ -7,7 +7,8 @@ chrome.browserAction.onClicked.addListener(
 
 chrome.runtime.onMessage.addListener(
     function (message, sender, sendResponse) {
-        console.log(message.data.url)
+        console.log("url to be downloaded: " + message.data.url);
+        console.log("title: " + message.data.title);
         chrome.downloads.download({
             url: message.data.url,
             filename: "papers/" + message.data.title +".pdf",
